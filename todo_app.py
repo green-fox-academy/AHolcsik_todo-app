@@ -3,11 +3,13 @@ import sys
 def app_arg():
     return len(sys.argv)
 
+
 def todo_print():
     if app_arg() == 1:
         print('Command Line Todo application \n ============================= \n Command line arguments: \n -l   Lists all the tasks \n -a   Adds a new task \n -r   Removes an task \n -c   Completes an task')
     else:
         return sys.argv[1]
+
 
 def todo_controller():
     if sys.argv[1] == '-l':
@@ -21,7 +23,6 @@ def todo_controller():
     else:
         print('Unsuported argument')
 
-file_name = 'todo.txt'
 
 def list_todo():
     try:
@@ -34,12 +35,17 @@ def list_todo():
     except IOError:
         print('Unable to read file: ', file_name)
 
+
 def add_todo():
     try:
         f = open(file_name, 'w')
         f.write(sys.argv[2])
     except IOError:
         print('Unable to read file: ', file_name)    
+
+
+
+
 
 
 todo_controller()
