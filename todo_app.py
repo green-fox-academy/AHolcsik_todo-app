@@ -17,7 +17,7 @@ def todo_controller():
     elif sys.argv[1] == '-a':
         add_todo()
     elif sys.argv[1] == '-r':
-        pass
+        remove_todo()
     elif sys.argv[1] == '-c':
         pass
     else:
@@ -46,6 +46,17 @@ def add_todo():
     except IOError:
         print('Unable to read file: ', file_name)    
 
+
+def remove_todo():
+    try:
+        f = open(file_name, 'r+')
+        # f.seek(0)
+        for index, line in enumerate(f.readlines()):
+            if index + 1 != sys.argv[2]:
+                f.write(line)
+        f.close()
+    except IOError:
+        print('Unable to read file: ', file_name)    
 
 
 
