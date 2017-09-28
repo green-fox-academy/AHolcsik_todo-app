@@ -41,8 +41,8 @@ def list_todo():
 
 def add_todo():
     try:
-        f = open(file_name, 'w')
-        f.write(sys.argv[2])
+        f = open(file_name, 'a')
+        f.write(sys.argv[2] + '\n')
     except IOError:
         print('Unable to read file: ', file_name)    
 
