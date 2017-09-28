@@ -23,6 +23,7 @@ def todo_controller():
     else:
         print('Unsuported argument')
 
+file_name = 'todo.txt'
 
 def list_todo():
     try:
@@ -31,7 +32,9 @@ def list_todo():
         if not first_char:
             print('No todos for today! :)')
         else:
-            print(f.read())
+            for index, line in enumerate(f.readlines()):
+                print(index + 1, '-', line)
+            f.close()
     except IOError:
         print('Unable to read file: ', file_name)
 
