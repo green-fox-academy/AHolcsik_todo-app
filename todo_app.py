@@ -49,19 +49,15 @@ def add_todo():
 
 def remove_todo():
     try:
-        f = open(file_name, 'r+')
-        # f.seek(0)
-        for index, line in enumerate(f.readlines()):
-            if index + 1 != sys.argv[2]:
-                f.write(line)
+        f = open(file_name, 'r')
+        listed = list(f)
+        del listed[int(sys.argv[2])]
+        f = open(file_name, 'w')
+        for line in listed:
+            f.write(line)
         f.close()
     except IOError:
         print('Unable to read file: ', file_name)    
-
-
-def convert_to_list_of_dictioneries():
-    
-
 
 
 
