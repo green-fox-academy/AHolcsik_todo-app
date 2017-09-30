@@ -27,6 +27,13 @@ def todo_controller():
 
 file_name = 'todo.txt'
 
+def chek_if():
+    try:
+        f = open(file_name, 'r')
+        for line in f.readlines:
+            
+    
+
 def list_todo():
     try:
         f = open(file_name, 'r')
@@ -62,8 +69,14 @@ def remove_todo():
         print('Unable to read file: ', file_name)    
 
 
+
+
 def check_todo():
-    
+    try:
+        f = open(file_name, 'r')
+        for line in f.readlines:
+            pass
+
 
 
 
