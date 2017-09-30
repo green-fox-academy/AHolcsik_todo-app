@@ -12,6 +12,8 @@ def todo_print():
 
 
 def todo_controller():
+    if app_arg() == 1:
+        todo_print()
     if sys.argv[1] == '-l':
         list_todo()
     elif sys.argv[1] == '-a':
@@ -19,7 +21,7 @@ def todo_controller():
     elif sys.argv[1] == '-r':
         remove_todo()
     elif sys.argv[1] == '-c':
-        pass
+        check_todo()
     else:
         print('Unsuported argument')
 
@@ -58,6 +60,12 @@ def remove_todo():
         f.close()
     except IOError:
         print('Unable to read file: ', file_name)    
+
+
+def check_todo():
+    
+
+
 
 
 
