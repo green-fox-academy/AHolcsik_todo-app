@@ -27,10 +27,10 @@ def todo_controller():
 
 file_name = 'todo.txt'
 
-def chek_if():
-    try:
-        f = open(file_name, 'r')
-        for line in f.readlines:
+# def chek_if():
+#     try:
+#         f = open(file_name, 'r')
+#         for line in f.readlines:
             
     
 
@@ -71,11 +71,11 @@ def remove_todo():
 
 
 
-def check_todo():
-    try:
-        f = open(file_name, 'r')
-        for line in f.readlines:
-            pass
+# def check_todo():
+#     try:
+#         f = open(file_name, 'r')
+#         for line in f.readlines:
+#             pass
 
 
 
